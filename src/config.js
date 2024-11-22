@@ -5,10 +5,10 @@ export const IS_AUTH_GUARD_ACTIVE = true;
 export const SERVICE_URL = '/app';
 export const USE_MULTI_LANGUAGE = true;
 
-// For detailed information: https://github.com/nfl/react-helmet#reference-guide
+
 export const REACT_HELMET_PROPS = {
-  defaultTitle: 'Acorn Admin Template',
-  titleTemplate: '%s | Acorn Admin Template',
+  defaultTitle: 'Interactive E-Learning Platform',
+  titleTemplate: '%s | Interactive E-Learning Platform',
 };
 
 export const DEFAULT_PATHS = {
