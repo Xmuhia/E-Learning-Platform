@@ -68,11 +68,15 @@
     "web-vitals": "^0.2.4",
     "yup": "^0.32.9"
   },
-  "scripts": {
-    "build-js": "react-scripts build",
-    "build-css": "sass --style=compressed --no-source-map src/sass/styles.scss:public/css/styles.css",
-    "build": "cross-env NODE_OPTIONS=--openssl-legacy-provider concurrently \"npm run build-css\" \"npm run build-js\""
-  },
+    "scripts": {
+      "build-css": "sass --style=compressed --no-source-map src/sass/styles.scss:public/css/styles.css",
+      "build-js": "react-scripts build",
+      "build": "NODE_OPTIONS='--openssl-legacy-provider' yarn build-css && yarn build-js",
+      "start": "react-scripts start",
+      "test": "react-scripts test",
+      "eject": "react-scripts eject"
+    }
+  ,
   "eslintConfig": {
     "extends": [
       "react-app"
