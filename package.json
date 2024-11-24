@@ -69,12 +69,9 @@
     "yup": "^0.32.9"
   },
   "scripts": {
-    "start-js": "react-scripts start --dev",
-    "start-css": "sass --style=compressed --watch src/sass/styles.scss:public/css/styles.css",
-    "start": "concurrently \"npm run start-js\" \"npm run start-css\"",
-    "build-js": "react-scripts build --prod",
+    "build-js": "react-scripts build",
     "build-css": "sass --style=compressed --no-source-map src/sass/styles.scss:public/css/styles.css",
-    "build": "concurrently \"npm run build-css\" \"npm run build-js\""
+    "build": "cross-env NODE_OPTIONS=--openssl-legacy-provider concurrently \"npm run build-css\" \"npm run build-js\""
   },
   "eslintConfig": {
     "extends": [
