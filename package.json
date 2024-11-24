@@ -74,13 +74,7 @@
     "start": "concurrently \"npm run start-js\" \"npm run start-css\"",
     "build-js": "react-scripts build --prod",
     "build-css": "sass --style=compressed --no-source-map src/sass/styles.scss:public/css/styles.css",
-    "build": "concurrently \"npm run build-css\" \"npm run build-js\"",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "lint": "eslint ./src/**/*.js",
-    "lint:fix": "eslint ./src --fix",
-    "precommit": "lint-staged",
-    "concurrently": "concurrently"
+    "build": "concurrently \"npm run build-css\" \"npm run build-js\""
   },
   "eslintConfig": {
     "extends": [
@@ -113,6 +107,7 @@
   "devDependencies": {
     "babel-plugin-module-resolver": "^4.1.0",
     "concurrently": "^6.2.0",
+    "cross": "^1.0.0",
     "eslint": "^7.28.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-prettier": "^8.3.0",
