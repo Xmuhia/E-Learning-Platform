@@ -68,10 +68,10 @@
     "yup": "^0.32.9"
   },
   "scripts": {
-    "build-css": "sass --style=compressed --no-source-map src/sass/styles.scss:public/css/styles.css && cp -r public/css build/",
-    "build-js": "CI=false NODE_OPTIONS='--openssl-legacy-provider' react-scripts build",
-    "build": "yarn build-css && yarn build-js && cp -r public/img build/ && cp -r public/font build/",
-    "postbuild": "cp public/_redirects build/"
+    "build-css": "sass --style=compressed --no-source-map src/sass/styles.scss:public/css/styles.css",
+    "copy-assets": "cp -r public/css build/ && cp -r public/img build/ && cp -r public/font build/ && cp -r public/assets build/",
+    "build-js": "CI=false GENERATE_SOURCEMAP=false NODE_OPTIONS='--openssl-legacy-provider' react-scripts build",
+    "build": "yarn build-css && yarn build-js && yarn copy-assets"
   },
   "eslintConfig": {
     "extends": [
