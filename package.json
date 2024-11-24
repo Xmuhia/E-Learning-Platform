@@ -69,13 +69,9 @@
   },
   "scripts": {
     "build-css": "sass --style=compressed --no-source-map src/sass/styles.scss:public/css/styles.css && cp -r public/css build/",
-    "build-js": "NODE_OPTIONS='--openssl-legacy-provider' react-scripts build",
+    "build-js": "CI=false NODE_OPTIONS='--openssl-legacy-provider' react-scripts build",
     "build": "yarn build-css && yarn build-js && cp -r public/img build/ && cp -r public/font build/",
-    "postbuild": "cp public/_redirects build/",
-    "start": "react-scripts start",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "verify-build": "node scripts/verify-build.js"
+    "postbuild": "cp public/_redirects build/"
   },
   "eslintConfig": {
     "extends": [

@@ -5,7 +5,6 @@ export const IS_AUTH_GUARD_ACTIVE = true;
 export const SERVICE_URL = '/app';
 export const USE_MULTI_LANGUAGE = true;
 
-
 export const REACT_HELMET_PROPS = {
   defaultTitle: 'Interactive E-Learning Platform',
   titleTemplate: '%s | Interactive E-Learning Platform',
